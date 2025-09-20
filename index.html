@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumbai Indian ipl team</title>
+    <link rel="stylesheet"href="style.css">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="text-white">
+    <header class="bg-csk-blue shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/" alt="MI Logo" class="h-12 mr-4" onerror="this.onerror=null;this.src='https://placehold.co/100x100/001f3f/f9cd05?text=MI';">
+                <h1 class="text-2xl font-bold tracking-wider mi-blue">Mumbai Indians</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-lg">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#schedule" class="nav-link">Schedule</a>
+                <a href="#news" class="nav-link">News</a>
+                <a href="#stats" class="nav-link">Stats</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-csk-blue">
+            <a href="#home" class="block py-2 px-4 text-sm hover:bg-csk-yellow hover:text-csk-blue">Home</a>
+            <a href="#team" class="block py-2 px-4 text-sm hover:bg-csk-yellow hover:text-csk-blue">Team</a>
+            <a href="#schedule" class="block py-2 px-4 text-sm hover:bg-csk-yellow hover:text-csk-blue">Schedule</a>
+            <a href="#news" class="block py-2 px-4 text-sm hover:bg-csk-yellow hover:text-csk-blue">News</a>
+            <a href="#stats" class="block py-2 px-4 text-sm hover:bg-csk-yellow hover:text-csk-blue">Stats</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="relative text-center py-20 md:py-32 bg-cover bg-center" style="background-image: url('https://placehold.co/1200x600/001f3f/f9cd05?text=MI+Stadium');">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative z-10 container mx-auto px-4">
+                <h2 class="text-5xl md:text-7xl font-extrabold mi-blue mb-4 animate-fade-in-down ">WELCOME, Mumbai Indians!</h2>
+                <p class="text-xl md:text-2xl mb-8 animate-fade-in-up">The official fan hub for the Mumbai Indians. Get the latest updates, scores, and more!</p>
+                <a href="#schedule" class="bg-csk-yellow text-csk-blue font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-300 transition duration-300 animate-bounce">View Schedule</a>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 mi-blue">MEET THE SQUAD - IPL 2025</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Player cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="py-20 bg-csk-blue">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 mi-blue">MATCH SCHEDULE - IPL 2025</h2>
+                <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden">
+                    <table class="w-full text-left">
+                        <thead class="bg-csk-yellow text-csk-blue uppercase">
+                            <tr>
+                                <th class="p-4">Date</th>
+                                <th class="p-4">Opponent</th>
+                                <th class="p-4">Venue</th>
+                                <th class="p-4">Time</th>
+                                <th class="p-4">Win</th>
+                                <th class="p-4">Loss</th>
+                            </tr>
+                        </thead>
+                        <tbody id="schedule-body">
+                           <!-- Schedule will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 mi-blue">LATEST NEWS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="news-container">
+                    <!-- News articles will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="py-20 bg-csk-blue">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 mi-blue">TEAM STATISTICS - IPL 2025</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl">
+                        <h3 class="text-2xl font-bold mb-4 mi-blue">Top Run Scorers</h3>
+                        <ul id="top-batsmen" class="space-y-2">
+                            <!-- Top batsmen stats will be dynamically inserted here -->
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl">
+                        <h3 class="text-2xl font-bold mb-4 mi-blue">Top Wicket Takers</h3>
+                        <ul id="top-bowlers" class="space-y-2">
+                            <!-- Top bowlers stats will be dynamically inserted here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-csk-blue py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Mumbai Indians Fan Hub. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">This is an unofficial fan-made website.</p>
+        </div>
+    </footer>
+  <script src="script.js"></script>  
+</body>
+</html>
